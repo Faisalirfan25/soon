@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle with Gradient</title>
+    <link rel="stylesheet" href="assests/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="elipse1"></div>
+    <div class="elipse2"></div>
+
+    <div class="center-div">
+        <div class="container">
+            <div class="text-wrap">
+                <span class="outline">COMING</span>
+                <span class="filled">SOON</span>
+            </div>
+        </div>
+
+        <div class="countdown-container">
+            <div class="countdown-box">
+                <div class="countdown-value">
+                    <div id="days-tens" class="digit">0</div>
+                    <div id="days-ones" class="digit">0</div>
+                </div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-value">
+                    <div id="hours-tens" class="digit">0</div>
+                    <div id="hours-ones" class="digit">0</div>
+                </div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-value">
+                    <div id="minutes-tens" class="digit">0</div>
+                    <div id="minutes-ones" class="digit">0</div>
+                </div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+        </div>
+        <div class="toggle-container" id="toggleContainer">
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-circle">
+                    <img src="assests/images/sms.png" alt="Email icon">
+                </div>
+                <span class="toggle-text">Notify Me</span>
+                <span class="toggle-arrow"></span>
+            </div>
+            <div class="email-input" id="emailInput">
+                <input type="email" placeholder="Enter your email">
+                <button type="button" id="submitButton">Submit</button>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+        </div>   
+    </div>
+    
+    <script src="/assests/js/script.js"></script>
+    <script src="assests/js/counter.js"></script>
+</body>
+</html>

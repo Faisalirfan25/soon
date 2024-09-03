@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-family: 'Poppins';
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('DigitalNumbers-Regular.woff') format('woff');
+}
+
+.elipse1, .elipse2 {
+    width: 580.48px;
+    height: 580.48px;
+    background: linear-gradient(137.62deg, #31B8D6 -19.27%, #E1A57D 91.22%);
+    border-radius: 50%;
+    opacity: 100;
+    transform: rotate(-15.45deg);
+    position: absolute;
+    z-index: -1; /* Push circles to the back */
+    filter: blur(228.692px);
+}
+
+.elipse1 {
+    top: -150px;
+    left: -50.36px;
+}
+
+.elipse2 {
+    bottom: -150px;
+    right: -50.36px;
+}
+
+.center-div {
+    width: calc(100% - 40px); /* Adjust for horizontal margin */
+    height: calc(100vh - 40px); /* Adjust for vertical margin */
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    color: white;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative;
+    z-index: 1; /* Ensure it appears in front of the circles */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.text-wrap {
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    line-height: 1; /* Ensures the text spacing is consistent */
+}
+
+.outline {
+    font-size: 10vw; /* Responsive font size */
+    color: transparent;
+    -webkit-text-stroke: 2px white; /* Outline color */
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.filled {
+    font-size: 10vw; /* Responsive font size */
+    background: linear-gradient(to right, #9DC0F8, #FAD5C9);
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 1;
+    position: absolute;
+    top: 40%; /* Adjust this value to move 'SOON' lower */
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .outline, .filled {
+        font-size: 15vw;
+    }
+    .filled {
+        top: 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .outline, .filled {
+        font-size: 20vw;
+    }
+    .filled {
+        top: 30%;
+    }
+}
+
+.countdown-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown-value {
+    display: flex;
+    gap: 10px;
+}
+.digit {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 5px;
+    width: 70px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Digital Numbers Regular', monospace;
+    font-size: 79.66px;
+    line-height: 102.84px;
+    color: #ffffff;
+}
+.countdown-label {
+    font-size: 16.6px;
+    font-weight: 400;
+    line-height: 24.89px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .countdown-container {
+        flex-direction: column;
+    }
+    .digit {
+        width: 50px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 70px;
+    }
+    .countdown-label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.toggle-container {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    background-color: #2a2a2a;
+    border-radius: 30px;
+    padding: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.toggle-switch {
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: justify-content 0.3s ease;
+}
+.toggle-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #9DC0F8, #FAD5C9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+}
+.toggle-circle img {
+    width: 24px;
+    height: 24px;
+}
+.toggle-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.toggle-arrow {
+    margin-left: auto;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+.toggle-arrow::after {
+    content: '>';
+    color: white;
+    font-size: 20px;
+}
+.toggle-container.active {
+    height: 160px;
+}
+.toggle-container.active .toggle-switch {
+    justify-content: flex-end;
+}
+.toggle-container.active .toggle-arrow {
+    transform: rotate(90deg);
+}
+.email-input {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.email-input input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 14px;
+}
+.email-input button {
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(to right, #9DC0F8, #FAD5C9);
+    padding: 10px;
+    border: none;
+    color: #2a2a2a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.social-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        flex-wrap: wrap;
+    }
+
+    .countdown-item {
+        min-width: 80px;
+    }
+
+    .social-icons {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        gap: 20px;
+    }
+}
